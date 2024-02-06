@@ -47,7 +47,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
 
 const Works = () => {
   return (
-    <>
+    <div>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
@@ -64,7 +64,7 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap  gap-7">
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-2">
         {projects.map((project, index)=>(
           <ProjectCard key={`project-${index}`}
           index={index}
@@ -72,8 +72,8 @@ const Works = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default SectionWrapper(Works, "works");
+export default SectionWrapper(Works, "work");
