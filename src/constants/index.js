@@ -18,6 +18,7 @@ import {
     meta,
     starbucks,
     tesla,
+    infogen,
     shopify,
     carrent,
     jobit,
@@ -118,7 +119,7 @@ import {
     {
       title: "Junior Software Developer",
       company_name: "Infogen labs",
-      icon: starbucks,
+      icon: infogen,
       iconBg: "#383E56",
       date: "June 2022 - Dec 2023",
       points: [
@@ -127,20 +128,20 @@ import {
         "Implementing responsive design and ensuring cross-browser compatibility.",
         "Participating in code reviews and providing constructive feedback to other developers.",
       ],
-    }/* ,
+    },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "Software Developer",
+      company_name: "Infogen labs",
+      icon: infogen,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "Dec 2022 - Present",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
         "Implementing responsive design and ensuring cross-browser compatibility.",
         "Participating in code reviews and providing constructive feedback to other developers.",
       ],
-    },
+    }/* ,
     {
       title: "Web Developer",
       company_name: "Shopify",
