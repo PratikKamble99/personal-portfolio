@@ -7,10 +7,6 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
-//template_fn9cwg4
-//service_0j3pmkz
-//DyLtGTRbtEuUC0G_S
-
 const Contact = () => {
   const formRef = React.useRef()
   const [isSent, setIsSent] = React.useState(false);
@@ -31,13 +27,13 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     emailjs.send(
-      'service_0j3pmkz', 
-      'template_fn9cwg4', 
+      import.meta.env.VITE_EMAIL_JS_SERVICE_KEY, 
+      import.meta.env.VITE_EMAIL_JS_TEMPLATE_KEY, 
       { 
         from_name: form.name,
         to_name: 'Pratik Kamble',
         from_email: form.email,
-        to_email:'kamblepratik1137@gmail.com',
+        to_email:import.meta.env.VITE_EMAIL_JS_TO_EMAIL,
         message: form.message
       },
       'DyLtGTRbtEuUC0G_S'
@@ -54,9 +50,6 @@ const Contact = () => {
       console.log(error);
       alert('something went wrong.')
     }); 
-
-
-
   }
 
   return (
@@ -71,13 +64,13 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-1">Your Name</span>
           </label>
-          <input type="text" name="email" value={form.email} onChange={handleChange} placeholder="What's your name" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"/>
+          <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="What's your name" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"/>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-1">Your Email</span>
           </label>
-          <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="What's your email" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"/>
+          <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="What's your email" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"/>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-1">Your Name</span>
+            <span className="text-white font-medium mb-1">Message</span>
           </label>
           <textarea name="message" rows={7} value={form.message} onChange={handleChange} placeholder="What do want to say" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"/>
           <button type="submit" className="bg-tertiary px-8 rounded-md py-3 outlined-none w-fit text-white shadow-md shadow-primary">{loading ? 'sending' : 'send'}</button>

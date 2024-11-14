@@ -30,6 +30,9 @@ import infogen from "./company/infogen.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import imageai from "./imageAi.png";
+import expenseTracker from "./expenseTracker.png";
+import pontisImg from "./pontis.png";
 
 export {
   logo,
@@ -61,4 +64,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  imageai,
+  expenseTracker,
+  pontisImg
 };
